@@ -1,0 +1,26 @@
+{% extends "vid4/wrapper.html" %}
+
+{% block content %}
+
+
+{% load staticfiles %}
+<div class="container">
+    <img src="{% static 'vid4/image/roman.jpg' %}" class="img-thumbnail">
+     <img src="{% static 'vid4/image/1.jpg' %}" class="img-thumbnail">
+  </div>
+ <h2>Различие составило:</h2>
+
+{% csrf_token %}
+    {{ a }}
+{% if a > x %}
+
+<h2>процентов.</h2>
+ <h2> Значит на фото не Роман Сладков.</h2>
+<h2>Поздравляю с вашим лицом все не так уж и критично</h2>
+{% else %}
+<h2>процентов.</h2>
+ <h2> Похоже на фото Роман Сладков или тот кто на него похож.</h2>
+<h2>Если 2 то сочувствую. Все же внешность не главное в жизни может в чем-то другом тебе повезет.</h2>
+{% endif %}
+
+{% endblock %}

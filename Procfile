@@ -1,0 +1,1 @@
+web: gunicorn mysite.wsqi --log-file -

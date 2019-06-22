@@ -1,0 +1,12 @@
+{% extends "vid4/wrapper.html" %}
+
+{% block content %}
+
+<form method="post"  enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Сохранить"  class="btn btn-primary btn-lg">
+    <a href="/contact" class="btn btn-info btn-lg">Запустить определитель </a>
+</form>
+
+{% endblock %}
